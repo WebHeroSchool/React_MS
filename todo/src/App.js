@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {count, length } from './number.js'
 
 const number = 5
 const flag = false
@@ -18,19 +19,7 @@ function App() {
         Hello World!
         </p>
         <p>
-        {number}
-        {true}
-        {false}
-        {undefined}
-        {null}
-        {flag && 'fag is true'}
-        </p>
-        <p>
-        {10}
-        {5+5}
-        </p>
-        <p>
-        {flag ? 'Flag is true' : 'Flag is false'}
+        {count*length}
         </p>
         <a
           className="App-link"
