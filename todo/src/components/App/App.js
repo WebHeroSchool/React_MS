@@ -1,11 +1,11 @@
 import React from 'react';
-import ItemList '../ItemList/ItemList';
+import ItemList from '../ItemList/ItemList';
 
 
-const App = () => (<>
+const App = () => (<div>
   <h1>Список важных дел:</h1>
   <ItemList />
-  </>
+  </div>
 );
 
 

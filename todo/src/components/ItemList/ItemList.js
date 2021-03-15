@@ -1,5 +1,5 @@
 import React from 'react';
-import Item '../Item/Item'
+import Item from '../Item/Item'
 
 const ItemList = () => ( <ul>
 <li><Item /></li>
