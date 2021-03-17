@@ -2,6 +2,7 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import InputCase from '../InputCase/InputCase';
+import './App.css';
 
 const todoItem = 'Написать новое приложение';
 
@@ -18,8 +19,8 @@ const items = [
   }
 ];
 return (
-  <div>
-  <h1>Список важных дел:</h1>
+  <div className="wrap">
+  <h1 className= "wrap_title">Список важных дел:</h1>
   <InputCase />
   <ItemList items = {items} />
   <Footer count = {3}/>
