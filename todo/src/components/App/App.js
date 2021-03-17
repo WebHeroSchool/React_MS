@@ -5,13 +5,26 @@ import InputCase from '../InputCase/InputCase';
 
 const todoItem = 'Написать новое приложение';
 
-const App = () => (<div>
+const App = () => {
+const items = [
+  {
+    value:'Написать новое приложение'
+   },
+  {
+    value:'Выполнить задание к уроку'
+  },
+  {
+    value:'Прогуляться'
+  }
+];
+return (
+  <div>
   <h1>Список важных дел:</h1>
   <InputCase />
-  <ItemList todoItem = {todoItem} />
+  <ItemList items = {items} />
   <Footer count = {3}/>
-  </div>
-);
+  </div>);
+}
 
 
 export default App;
