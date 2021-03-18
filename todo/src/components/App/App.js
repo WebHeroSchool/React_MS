@@ -4,7 +4,6 @@ import Footer from '../Footer/Footer';
 import InputCase from '../InputCase/InputCase';
 import styles from './App.module.css';
 
-const todoItem = 'Написать новое приложение';
 
 const App = () => {
 const items = [
@@ -22,12 +21,14 @@ const items = [
   }
 ];
 return (
+<div className={styles.body}>
   <div className={styles.wrap}>
   <h1 className={styles.title}>Список важных дел:</h1>
   <InputCase />
   <ItemList items = {items} />
   <Footer count = {3}/>
-  </div>);
+  </div>
+</div>);
 }
 
 
