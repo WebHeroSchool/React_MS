@@ -25,7 +25,7 @@ return (
   <div className={styles.wrap}>
   <h1 className={styles.title}>Список важных дел:</h1>
   <InputCase />
-  <ItemList items = {items} />
+  <ItemList items ={items} />
   <Footer count = {3}/>
   </div>
 </div>);
