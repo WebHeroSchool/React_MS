@@ -6,12 +6,3 @@
 .item {
   justify-content: center;
 }
-
-.icon{
-  padding-top: 25px;
-  padding-left: 25px;
-}
-
-.icon:hover {
-  color: #c4c4c4;
-}
