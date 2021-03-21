@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Footer = ({count}) => (
-  <footer> Осталось выполнить вот столько дел: {count} </footer>
+const Footer = ({count,onClickFooter}) => (
+  <footer > Осталось выполнить вот столько дел: {count} </footer>
 );
 
 
