@@ -23,7 +23,8 @@ class App extends React.Component {
         id:3
       }
     ],
-    count: 6
+    count: 3,
+    formError:false
   };
 
   onClickDone = id => {
@@ -45,16 +46,39 @@ class App extends React.Component {
     this.setState({items: newItemList});
   };
 
+  onClickAdd = value => {
+  		if ( value !== '') {
+
+  			this.setState(state => ({
+  				items: [
+  					...state.items,
+  					{
+  						value,
+  						isDone: false,
+  						id: state.count + 1
+  					}
+  				],
+  				count: state.count + 1,
+  				formError: false
+  			}));
+  	} else {
+  		this.setState(state => ({
+  			formError: true
+  		}))
+    }
+}
   render () {
     return (
       <div className={styles.wrap}>
-      <h1 className={styles.title}>Список важных дел:</h1>
-      <InputCase />
-      <ItemList
-      items ={this.state.items}
-      onClickDone={this.onClickDone}
-      onClickDelete={this.onClickDelete}  />
-      <Footer count = {this.state.count} />
+        <h1 className={styles.title}>Список важных дел:</h1>
+        <InputCase
+        onClickAdd = {this.onClickAdd}
+        formError= {this.state.formError} />
+        <ItemList
+        items ={this.state.items}
+        onClickDone={this.onClickDone}
+        onClickDelete={this.onClickDelete}  />
+        <Footer count = {this.state.count} />
       </div>);
   }
 };
