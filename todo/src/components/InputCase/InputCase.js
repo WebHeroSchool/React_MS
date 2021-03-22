@@ -28,18 +28,18 @@ class InputCase extends React.Component {
 
     return (
       <>
-      <FormControl error>
+      <FormControl  fullWidth error>
       <TextField
        id="standard-full-width"
        style={{ margin: 8 }}
        placeholder="Добавить задание"
        fullWidth
        margin="normal"
-       InputLabelProps={{
+       /*InputLabelProps={{
        shrink: true,
-       }}
+     }}*/
        value = {this.state.inputValue.toUpperCase()}
-       onChange ={event => this.setState({inputValue:event.target.value})}
+       onChange ={event => this.setState({inputValue:event.target.value.toUpperCase()})}
         />
         <>
         {formHelperText}
