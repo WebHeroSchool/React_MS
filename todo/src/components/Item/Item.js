@@ -25,5 +25,9 @@ const Item = ({value,isDone,id,onClickDone,onClickDelete}) => (
   </>
 );
 
+Item.defaultProps = {
+    value: "Нет задачи"
+};
+
 
 export default Item;

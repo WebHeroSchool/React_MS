@@ -14,4 +14,11 @@ const ItemList = ({items,onClickDone,onClickDelete}) => (<ul className ={styles.
   </li>)}
 </ul>);
 
+ItemList.defaultProps = {
+    item: [{
+        value: 'Задачи не найдены.',
+        isDone: false
+    }]
+  }
+
 export default ItemList;
