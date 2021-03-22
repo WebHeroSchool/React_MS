@@ -16,7 +16,6 @@ class InputCase extends React.Component {
   };
 
   render () {
-    const {onClickAdd} = this.props;
     const condition = this.props.formError;
 		let formHelperText;
     if (condition) {
