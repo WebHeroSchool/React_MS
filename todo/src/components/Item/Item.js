@@ -3,6 +3,7 @@ import styles from './Item.module.css';
 import classnames from 'classnames';
 import Checkbox from '@material-ui/core/Checkbox';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import PropTypes from 'prop-types';
 
 const Item = ({value,isDone,id,onClickDone,onClickDelete}) => (
 <>
@@ -27,6 +28,10 @@ const Item = ({value,isDone,id,onClickDone,onClickDelete}) => (
 
 Item.defaultProps = {
     value: "Нет задачи"
+};
+
+Item.propTypes = {
+  value: PropTypes.string.isRequired
 };
 
 

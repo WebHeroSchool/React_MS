@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import PropTypes from 'prop-types';
 
 class InputCase extends React.Component {
   state = {
@@ -35,9 +36,6 @@ class InputCase extends React.Component {
        placeholder="Добавить задание"
        fullWidth
        margin="normal"
-       /*InputLabelProps={{
-       shrink: true,
-     }}*/
        value = {this.state.inputValue.toUpperCase()}
        onChange ={event => this.setState({inputValue:event.target.value.toUpperCase()})}
         />
@@ -56,5 +54,13 @@ class InputCase extends React.Component {
    </>);
  }
 }
+
+InputCase.propTypes = {
+  value: PropTypes.oneOfType ([
+        PropTypes.string,
+        PropTypes.number
+    ])
+};
+
 
 export default InputCase;
