@@ -1,0 +1,10 @@
+.wrap {
+  margin: auto;
+  width:500px;
+  text-align: left;
+}
+
+.title {
+  font-family: Roboto;
+  font-size: 30px;
+}

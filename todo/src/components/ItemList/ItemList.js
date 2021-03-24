@@ -1,10 +1,30 @@
 import React from 'react';
-import Item from '../Item/Item'
+import Item from '../Item/Item';
+import styles from './ItemList.module.css';
+import PropTypes from 'prop-types';
 
-const ItemList = ({todoItem}) => ( <ul>
-<li><Item todoItem = {todoItem} /></li>
-<li><Item todoItem = {'Выполнить задание к уроку'}/></li>
-<li><Item todoItem = {'Прогуляться'}/></li>
+
+const ItemList = ({items,onClickDone,onClickDelete}) => (<ul className ={styles.itemList}>
+  {items.map(item => <li key={item.value} className = {styles.item}>
+        <Item value = {item.value}
+        isDone = {item.isDone}
+        id = {item.id}
+        onClickDone = {onClickDone}
+        onClickDelete = {onClickDelete}
+        />
+  </li>)}
 </ul>);
+
+ItemList.defaultProps = {
+    item: [{
+        value: 'Задачи не найдены.',
+        isDone: false
+    }]
+  }
+
+ItemList.propTypes = {
+    value: PropTypes.array
+  };
+
 
 export default ItemList;
